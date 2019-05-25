@@ -3,9 +3,14 @@
 */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body {
+#index {
     font-family: 'Raleway', sans-serif;
     background: #fafafa;
+}
+
+#login {
+    font-family: 'Raleway', sans-serif;
+    background: #2e2a43;
 }
 
 p {
@@ -274,6 +279,15 @@ a.article:hover {
     border-radius: 50%;
     color:#ff5d02;
     }
+
+#login-logo{
+    height: 12.1em;
+}
+
+#login .container .row {
+    margin: 1em;
+    color: white;
+}
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
