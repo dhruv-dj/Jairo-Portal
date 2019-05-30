@@ -5,12 +5,12 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 #index {
     font-family: 'Raleway', sans-serif;
-    background: #fafafa;
+    background: #eeeeee;
 }
 
 #login {
     font-family: 'Raleway', sans-serif;
-    background: #2e2a43;
+    background: rgba(46,42,67,1);
 }
 
 p {
@@ -68,7 +68,7 @@ span {
 #sidebar {
     min-width: 220px;
     max-width: 220px;
-    background: #2e2a43;
+    background: rgba(46,42,67,1);
     color: #fff;
     transition: all 0.3s;
 }
@@ -125,7 +125,7 @@ span {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #2e2a43;
+    background: rgba(46,42,67,1);
 }
 
 #sidebar .sidebar-header .navbar-icon {
@@ -145,7 +145,7 @@ span {
 }
 
 #sidebar ul li a:hover {
-    color: #2e2a43;
+    color: rgba(46,42,67,1);
     background: #fff;
 }
 
@@ -156,7 +156,7 @@ span {
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #2e2a43;
+    background: rgba(46,42,67,1);
 }
 
 a[data-toggle="collapse"] {
@@ -174,7 +174,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #2e2a43;
+    background: rgba(46,42,67,1);
 }
 
 ul.CTAs {
@@ -191,12 +191,12 @@ ul.CTAs a {
 
 a.download {
     background: #fff;
-    color: #2e2a43;
+    color: rgba(46,42,67,1);
 }
 
 a.article,
 a.article:hover {
-    background: #2e2a43 !important;
+    background: rgba(46,42,67,1) !important;
     color: #fff !important;
 }
 .logo{
@@ -220,7 +220,7 @@ a.article:hover {
     align-content: center;
 }
 .topnav{
-    background-color: #2e2a43;
+    background-color: rgba(46,42,67,1);
 }
 .element-icon{
     height: 60px;
