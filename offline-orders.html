@@ -503,7 +503,7 @@
 										</a>
 									</li>
                                     <li>
-										<a href="mailbox-folder.html">
+										<a href="inventory_reorder.html">
 <!--											<span class="pull-right label label-primary">182</span>-->
 											<i class="fa fa-truck" aria-hidden="true"></i>
 											<span>Inventory</span>
@@ -625,16 +625,25 @@
 									</header>
 									<div class="panel-body">
 										<form class="form-horizontal form-bordered" method="get">
-											<div class="form-group">
-												<label class="col-md-3 control-label" for="inputDefault">Retailer Name</label>
-												<div class="col-md-6">
+											
+                                            <div class = "row">
+                                                <div class="form-group col-md-6">
+												<label class="col-md-4 control-label" for="inputDefault">Retailer Name</label>
+												<div class="col-md-8">
+													<input type="text" class="form-control" id="inputDefault">
+                                                    </div></div>
+                                                    <div class="form-group col-md-6">
+												<label class="col-md-4 control-label" for="inputDefault">Model Number</label>
+												<div class="col-md-8">
 													<input type="text" class="form-control" id="inputDefault">
 												</div>
 											</div>
-						
-											<div class="form-group">
-												<label class="col-md-3 control-label">Order Date</label>
-												<div class="col-md-6">
+											
+                                            </div>
+						<div class="row">
+											<div class="form-group col-md-6">
+												<label class="col-md-4 control-label">Order Date</label>
+												<div class="col-md-8">
 													<div class="input-group">
 														<span class="input-group-addon">
 															<i class="fa fa-calendar"></i>
@@ -643,9 +652,9 @@
 													</div>
 												</div>
 											</div>
-                                            <div class="form-group">
-												<label class="col-md-3 control-label">Delivery Date</label>
-												<div class="col-md-6">
+                                            <div class="form-group col-md-6">
+												<label class="col-md-4 control-label">Delivery Date</label>
+												<div class="col-md-8">
 													<div class="input-group">
 														<span class="input-group-addon">
 															<i class="fa fa-calendar"></i>
@@ -654,16 +663,13 @@
 													</div>
 												</div>
 											</div>
-                                            <div class="form-group">
-												<label class="col-md-3 control-label" for="inputDefault">Model Number</label>
-												<div class="col-md-6">
-													<input type="text" class="form-control" id="inputDefault">
-												</div>
-											</div>
+                            </div>
+                                            <div class = "row">
                                             
-                                            <div class="form-group">
-												<label class="col-md-3 control-label">Size</label>
-												<div class="col-md-6">
+                                            
+                                            <div class="form-group col-md-6">
+												<label class="col-md-4 control-label">Size</label>
+												<div class="col-md-8">
 													<select data-plugin-selectTwo class="form-control populate">
 														<optgroup label="Apparel Sizes">
 															<option value="L">L - Large</option>
@@ -674,9 +680,9 @@
 													</select>
 												</div>
 											</div>
-                                            <div class="form-group">
-												<label class="col-md-3 control-label">Quantity</label>
-												<div class="col-md-6">
+                                                <div class="form-group col-md-6">
+												<label class="col-md-4 control-label">Quantity</label>
+												<div class="col-md-8">
 													<div data-plugin-spinner data-plugin-options='{ "value":0, "min": 0, "max": 100 }'>
 														<div class="input-group" style="width:150px;">
 															<input type="text" class="spinner-input form-control" maxlength="3" readonly>
@@ -695,6 +701,8 @@
 													</p>
 												</div>
 											</div>
+                                                </div>
+                                            
 						
 											
 										</form>
