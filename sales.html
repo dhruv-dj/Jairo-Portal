@@ -877,13 +877,15 @@
 -->
 										</ul>
 									</li>
+<!--
                                     <li>
 										<a href="purchases.html">
-<!--											<span class="pull-right label label-primary">182</span>-->
+											<span class="pull-right label label-primary">182</span>
 											<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 											<span>Purchases</span>
 										</a>
 									</li>
+-->
                                     <li>
 										<a href="inventory_reorder.html">
 <!--											<span class="pull-right label label-primary">182</span>-->
@@ -892,7 +894,7 @@
 										</a>
 									</li>
                                     <li>
-										<a href="mailbox-folder.html">
+										<a href="Master.html">
 <!--											<span class="pull-right label label-primary">182</span>-->
 											<i class="fa fa-user" aria-hidden="true"></i>
 											<span>Master</span>
@@ -1817,9 +1819,41 @@
 									<a href="#" class="fa fa-times"></a>
 								</div>
 						
-								<h2 class="panel-title">Rows with Details</h2>
+								<h2 class="panel-title">Sales Details</h2>
 							</header>
 							<div class="panel-body">
+									<div class="row">
+											<div class="form-group col-md-4">
+												<label class="col-md-3 control-label">From</label>
+												<div class="col-md-9">
+													<div class="input-group">
+														<span class="input-group-addon">
+															<i class="fa fa-calendar"></i>
+														</span>
+														<input type="text" data-plugin-datepicker class="form-control">
+													</div>
+												</div>
+											</div>
+                                            <div class="form-group col-md-4">
+												<label class="col-md-3 control-label">To</label>
+												<div class="col-md-9">
+													<div class="input-group">
+														<span class="input-group-addon">
+															<i class="fa fa-calendar"></i>
+														</span>
+														<input type="text" data-plugin-datepicker class="form-control">
+													</div>
+												</div>
+											</div>
+                                            <div class="form-group col-md-4">
+                                                <label class="col-md-4 control-label"></label>
+                                                    <div class="col-md-8">
+                                                        <div class="input-group">
+                                                            <input type="submit" id="submitsearch" name = submit>
+                                                        </div>
+                                                    </div>
+                                           </div>
+							         </div>
 								<table class="table table-bordered table-striped mb-none" id="datatable-details">
 									<thead>
 										<tr>

@@ -33,6 +33,61 @@
 
 		<!-- Head Libs -->
 		<script src="assets/vendor/modernizr/modernizr.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.js"></script> 
+
+
+		<script>
+			$(document).ready(function(){
+				$("#saveofflinebutton").click(function(e)
+				{
+				var MyForm = $("#offlineorderform").serializeJSON();
+				console.log(MyForm);
+				 $.ajax(
+				 {
+				 url : "http://34.93.33.196/api/wholesalers-saleorders/create-orders?access_token=ViqEcWdkYjfQipGRvhVf5rr9vceuIcEoQUuXIUhstRy7tSDsBmzVzfOq5iGTD6qa ",
+				 type: "POST",
+				 data : MyForm,
+				 success:function(maindta)
+				 {
+				alert(maindta);
+				// window.location = 'http://35.224.243.123/Jairo-Portal-master/pages-signin.html'
+				//window.location.href = 'index.html';
+				 },
+				 error: function(jqXHR, textStatus, errorThrown)
+				 {
+				 }
+				 });
+				 e.preventDefault(); //STOP default action
+				});
+				});
+			</script>
+	
+	<!--<script>
+		$(document).ready(function(){
+			$("#signin1").click(function(e)
+			{
+			var MyForm = $("#loginform").serializeJSON();
+			console.log(MyForm);
+			 $.ajax(
+			 {
+			 url : "http://34.93.33.196/api/wholesalers/login",
+			 type: "POST",
+			 data : MyForm,
+			 success:function(maindta)
+			 {
+			alert(maindta);
+			// window.location = 'http://35.224.243.123/Jairo-Portal-master/pages-signin.html'
+			//window.location.href = 'index.html';
+			 },
+			 error: function(jqXHR, textStatus, errorThrown)
+			 {
+			 }
+			 });
+			 e.preventDefault(); //STOP default action
+			});
+			});
+		</script>-->
 
 	</head>
 	<body class = "dashboard">
@@ -495,13 +550,15 @@
 -->
 										</ul>
 									</li>
+<!--
                                     <li>
 										<a href="purchases.html">
-<!--											<span class="pull-right label label-primary">182</span>-->
+											<span class="pull-right label label-primary">182</span>
 											<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 											<span>Purchases</span>
 										</a>
 									</li>
+-->
                                     <li>
 										<a href="inventory_reorder.html">
 <!--											<span class="pull-right label label-primary">182</span>-->
@@ -510,7 +567,7 @@
 										</a>
 									</li>
                                     <li>
-										<a href="mailbox-folder.html">
+										<a href="Master.html">
 <!--											<span class="pull-right label label-primary">182</span>-->
 											<i class="fa fa-user" aria-hidden="true"></i>
 											<span>Master</span>
@@ -624,18 +681,18 @@
 										<h2 class="panel-title">Add an Offline Order</h2>
 									</header>
 									<div class="panel-body">
-										<form class="form-horizontal form-bordered" method="get">
+										<form class="form-horizontal form-bordered" method="POST" id="offlineorderform">
 											
                                             <div class = "row">
                                                 <div class="form-group col-md-6">
 												<label class="col-md-4 control-label" for="inputDefault">Retailer Name</label>
 												<div class="col-md-8">
-													<input type="text" class="form-control" id="inputDefault">
+													<input type="text" class="form-control" name="productId" id="inputDefault">
                                                     </div></div>
                                                     <div class="form-group col-md-6">
 												<label class="col-md-4 control-label" for="inputDefault">Model Number</label>
 												<div class="col-md-8">
-													<input type="text" class="form-control" id="inputDefault">
+													<input type="text" class="form-control" id="inputDefault" name="quantity_ordered">
 												</div>
 											</div>
 											
@@ -709,7 +766,7 @@
                                         <br>
                                         <div class="row">
 											<div class="col-sm-12 col-sm-offset-4">
-												<button class="btn btn-primary">Submit</button>
+												<button type="submit" button class="btn btn-primary" id="saveofflinebutton">Submit</button>
                                                 &nbsp;
 												<button type="reset" class="btn btn-default">Reset</button>
 											</div>
@@ -1059,8 +1116,8 @@
 		</section>
 
 		<!-- Vendor -->
-		<script src="assets/vendor/jquery/jquery.js"></script>
-		<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+		<!-- <script src="assets/vendor/jquery/jquery.js"></script>
+		<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script> -->
 		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
 		<script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
 		<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>

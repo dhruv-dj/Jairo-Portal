@@ -5,7 +5,7 @@
 		<!-- Basic -->
 		<meta charset="UTF-8">
 
-		<title>Online Orders | Jairo</title>
+		<title>Closed | Sales | Jairo</title>
 		<meta name="keywords" content="HTML5 Admin Template" />
 		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
 		<meta name="author" content="okler.net">
@@ -22,6 +22,10 @@
 		<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
 		<link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
 
+		<!-- Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/select2/select2.css" />
+		<link rel="stylesheet" href="assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
+
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="assets/stylesheets/theme.css" />
 
@@ -32,10 +36,18 @@
 		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
 
 		<!-- Head Libs -->
-		<script src="assets/vendor/modernizr/modernizr.js"></script>
-
+        <script src="assets/vendor/modernizr/modernizr.js"></script>
+        
+        <script> 
+        $(document).ready(function updateinventory(){
+            {
+						window.location.href = 'Update-Inventory.html';
+             }
+            }
+        </script>
+    
 	</head>
-	<body class = "dashboard">
+	<body class="dashboard">
 		<section class="body">
 
 			<!-- start: header -->
@@ -529,12 +541,12 @@
 											<span>Tables</span>
 										</a>
 										<ul class="nav nav-children">
-											<li class="nav-active">
+											<li>
 												<a href="tables-basic.html">
 													 Basic
 												</a>
 											</li>
-											<li>
+											<li class="nav-active">
 												<a href="tables-advanced.html">
 													 Advanced
 												</a>
@@ -653,7 +665,7 @@
 									</li>
 								</ul>
 							</nav> -->
-                            <nav id="menu" class="nav-main" role="navigation">
+				            <nav id="menu" class="nav-main" role="navigation">
 								<ul class="nav nav-main">
 									<li >
 										<a href="index.html">
@@ -668,13 +680,13 @@
 											<span>Offline Order</span>
 										</a>
 									</li>
-									<li class="nav-parent nav-expanded nav-active">
+									<li class="nav-parent ">
 										<a>
 											<i class="fa fa-globe" aria-hidden="true"></i>
 											<span>Online Orders</span>
 										</a>
 										<ul class="nav nav-children">
-											<li  class="nav-active">
+											<li >
 												<a href="online-orders.html">
 													 Requested
 												</a>
@@ -764,7 +776,7 @@
 											<span>Sales</span>
 										</a>
 										<ul class="nav nav-children">
-											<li>
+											<li >
 												<a href="sales.html">
 													 Closed
 												</a>
@@ -874,8 +886,8 @@
 										</ul>
 									</li>
 <!--
-                                    <li>
-										<a href="purchases.html">
+                                    <li class="nav-active">
+										<a href="Master.html">
 											<span class="pull-right label label-primary">182</span>
 											<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 											<span>Purchases</span>
@@ -889,7 +901,7 @@
 											<span>Inventory</span>
 										</a>
 									</li>
-                                    <li>
+                                    <li class = "nav-active">
 										<a href="Master.html">
 <!--											<span class="pull-right label label-primary">182</span>-->
 											<i class="fa fa-user" aria-hidden="true"></i>
@@ -912,7 +924,6 @@
 									</li>
 								</ul>
 							</nav>
-				
 							
 						</div>
 				
@@ -923,7 +934,7 @@
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>Online Orders</h2>
+						<h2>Master</h2>
 					
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
@@ -932,576 +943,137 @@
 										<i class="fa fa-home"></i>
 									</a>
 								</li>
-								<li><span>Online Orders</span></li>
-								<li><span>Requested</span></li>
+								<li><span>Master</span></li>
+								<li><span>New</span></li>
 							</ol>
 					
 							<a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
 						</div>
 					</header>
 
-					<!-- start: page -->
-				<!--		<div class="row">
-							<div class="col-md-6">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
-										</div>
-						
-										<h2 class="panel-title">Basic</h2>
-									</header>
-									<div class="panel-body">
-										<div class="table-responsive">
-											<table class="table mb-none">
-												<thead>
-													<tr>
-														<th>#</th>
-														<th>First Name</th>
-														<th>Last Name</th>
-														<th>Username</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>Jacob</td>
-														<td>Thornton</td>
-														<td>@fat</td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td>Larry</td>
-														<td>the Bird</td>
-														<td>@twitter</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</section>
-							</div>
-							<div class="col-md-6">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
-										</div>
-						
-										<h2 class="panel-title">Striped</h2>
-									</header>
-									<div class="panel-body">
-										<div class="table-responsive">
-											<table class="table table-striped mb-none">
-												<thead>
-													<tr>
-														<th>#</th>
-														<th>First Name</th>
-														<th>Last Name</th>
-														<th>Username</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>Jacob</td>
-														<td>Thornton</td>
-														<td>@fat</td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td>Larry</td>
-														<td>the Bird</td>
-														<td>@twitter</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</section>
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-md-6">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
-										</div>
-						
-										<h2 class="panel-title">Bordered</h2>
-									</header>
-									<div class="panel-body">
-										<div class="table-responsive">
-											<table class="table table-bordered mb-none">
-												<thead>
-													<tr>
-														<th>#</th>
-														<th>First Name</th>
-														<th>Last Name</th>
-														<th>Username</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>Jacob</td>
-														<td>Thornton</td>
-														<td>@fat</td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td>Larry</td>
-														<td>the Bird</td>
-														<td>@twitter</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</section>
-							</div>
-							<div class="col-md-6">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
-										</div>
-						
-										<h2 class="panel-title">Hover Rows</h2>
-									</header>
-									<div class="panel-body">
-										<div class="table-responsive">
-											<table class="table table-hover mb-none">
-												<thead>
-													<tr>
-														<th>#</th>
-														<th>First Name</th>
-														<th>Last Name</th>
-														<th>Username</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>Jacob</td>
-														<td>Thornton</td>
-														<td>@fat</td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td>Larry</td>
-														<td>the Bird</td>
-														<td>@twitter</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</section>
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-md-6">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
-										</div>
-						
-										<h2 class="panel-title">Contextual</h2>
-									</header>
-									<div class="panel-body">
-										<div class="table-responsive">
-											<table class="table mb-none">
-												<thead>
-													<tr>
-														<th>#</th>
-														<th>Class</th>
-														<th>Text</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr class="active">
-														<td>1</td>
-														<td>active</td>
-														<td>Lorem ipsum dolor sit amet</td>
-													</tr>
-													<tr class="primary">
-														<td>2</td>
-														<td>primary</td>
-														<td>Lorem ipsum dolor sit amet</td>
-													</tr>
-													<tr class="success">
-														<td>3</td>
-														<td>success</td>
-														<td>Lorem ipsum dolor sit amet</td>
-													</tr>
-													<tr class="warning">
-														<td>4</td>
-														<td>warning</td>
-														<td>Lorem ipsum dolor sit amet</td>
-													</tr>
-													<tr class="danger">
-														<td>5</td>
-														<td>danger</td>
-														<td>Lorem ipsum dolor sit amet</td>
-													</tr>
-													<tr class="info">
-														<td>6</td>
-														<td>info</td>
-														<td>Lorem ipsum dolor sit amet</td>
-													</tr>
-													<tr class="dark">
-														<td>7</td>
-														<td>dark</td>
-														<td>Lorem ipsum dolor sit amet</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</section>
-							</div>
-							<div class="col-md-6">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
-										</div>
-						
-										<h2 class="panel-title">Condensed</h2>
-									</header>
-									<div class="panel-body">
-										<div class="table-responsive">
-											<table class="table table-condensed mb-none">
-												<thead>
-													<tr>
-														<th>#</th>
-														<th>First Name</th>
-														<th>Last Name</th>
-														<th>Username</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>Jacob</td>
-														<td>Thornton</td>
-														<td>@fat</td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td>Larry</td>
-														<td>the Bird</td>
-														<td>@twitter</td>
-													</tr>
-													<tr>
-														<td>4</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-													</tr>
-													<tr>
-														<td>5</td>
-														<td>Jacob</td>
-														<td>Thornton</td>
-														<td>@fat</td>
-													</tr>
-													<tr>
-														<td>6</td>
-														<td>Larry</td>
-														<td>the Bird</td>
-														<td>@twitter</td>
-													</tr>
-													<tr>
-														<td>7</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-													</tr>
-													<tr>
-														<td>8</td>
-														<td>Jacob</td>
-														<td>Thornton</td>
-														<td>@fat</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</section>
-							</div>
-						</div>
-						
-						<div class="row">
-							<div class="col-md-6">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
-										</div>
-						
-										<h2 class="panel-title">Actions</h2>
-									</header>
-									<div class="panel-body">
-										<div class="table-responsive">
-											<table class="table mb-none">
-												<thead>
-													<tr>
-														<th>#</th>
-														<th>First Name</th>
-														<th>Last Name</th>
-														<th>Username</th>
-														<th>Actions</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-														<td class="actions">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>Jacob</td>
-														<td>Thornton</td>
-														<td>@fat</td>
-														<td class="actions">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td>Larry</td>
-														<td>the Bird</td>
-														<td>@twitter</td>
-														<td class="actions">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</section>
-							</div>
-							<div class="col-md-6">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
-										</div>
-						
-										<h2 class="panel-title">Actions Hover</h2>
-									</header>
-									<div class="panel-body">
-										<div class="table-responsive">
-											<table class="table mb-none">
-												<thead>
-													<tr>
-														<th>#</th>
-														<th>First Name</th>
-														<th>Last Name</th>
-														<th>Username</th>
-														<th>Actions</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-														<td class="actions-hover">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>Jacob</td>
-														<td>Thornton</td>
-														<td>@fat</td>
-														<td class="actions-hover">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td>Larry</td>
-														<td>the Bird</td>
-														<td>@twitter</td>
-														<td class="actions-hover">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-							</div>
-						</div> -->    
-						
-						<div class="row">
-				<!--			<div class="col-md-6">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
-										</div>
-						
-										<h2 class="panel-title">Actions Hover with fade</h2>
-									</header>
-									<div class="panel-body">
-										<div class="table-responsive">
-											<table class="table mb-none">
-												<thead>
-													<tr>
-														<th>#</th>
-														<th>First Name</th>
-														<th>Last Name</th>
-														<th>Username</th>
-														<th>Actions</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-														<td class="actions-hover actions-fade">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>Jacob</td>
-														<td>Thornton</td>
-														<td>@fat</td>
-														<td class="actions-hover actions-fade">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td>Larry</td>
-														<td>the Bird</td>
-														<td>@twitter</td>
-														<td class="actions-hover actions-fade">
-															<a href=""><i class="fa fa-pencil"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</section>
-							</div> -->
-							<div class="col-md-12">
-								<section class="panel">
-									<header class="panel-heading">
-										<div class="panel-actions">
-											<a href="#" class="fa fa-caret-down"></a>
-											<a href="#" class="fa fa-times"></a>
-										</div>
-						
-										<h2 class="panel-title">Requested Orders</h2>
-									</header>
-									<div class="panel-body">
-										<div class="table-responsive">
-											<table class="table table-hover mb-none">
-												<thead>
-													<tr>
-														<th>Order #</th>
-														<th>Retailer Name</th>
-														<th>Order Date</th>
-														<th>Delivery Date</th>
-														<th>Model Number</th>
-                                                        <th>Size</th>
-                                                        <th>Qty</th>
-                                                        <th>Status</th>
-                                                        <th>Action</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-                                                        <td>1</td>
-														<td>Mark</td>
-														<td>Otto</td>
-														<td>@mdo</td>
-														<td class="actions-hover actions-fade">
-															<a href=""><i class="fa fa-check"></i></a>
-															<a href="" class="delete-row"><i class="fa fa-trash-o"></i></a>
-														</td>
-													</tr>
-													
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</section>
-							</div>
-						</div>
 					<!-- end: page -->
+                      <div class="row">
+							<div class="col-lg-12">
+								<section class="panel">
+									<header class="panel-heading">
+										<div class="panel-actions">
+											<a href="#" class="fa fa-caret-down"></a>
+											<a href="#" class="fa fa-times"></a>
+										</div>
+						
+										<h2 class="panel-title">Manage your inventory and Users</h2>
+									</header>
+									<div class="panel-body">
+										<form class="form-horizontal form-bordered" method="get">
+                                                <br><br>
+                                            <div class = "row">
+                                                <div class="form-group col-md-6">
+                                                        <div class="col-sm-12 col-sm-offset-4">
+                                                                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button onClick="location.href='Update-Inventory.html'" class="btn btn-primary">Manage Inventory</button><br><br><br><br>
+                                                                &nbsp;                                                               
+                                                            </div>
+												</div>
+                                            </div>
+                                            <div class = "row">
+                                                <div class="form-group col-md-6">
+                                                        <div class="col-sm-12 col-sm-offset-4">
+                                                                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button onClick="location.href='manage_security.html'" class="btn btn-primary" type = "button">Manage Sub Users </button><br><br><br><br>
+                                                                &nbsp;                                                               
+                                                            </div>
+												</div>
+                                            </div>
+                                            <div class = "row">
+                                                    <div class="form-group col-md-6">
+                                                            <div class="col-sm-12 col-sm-offset-4">
+                                                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <button onClick="location.href='Update-Inventory.html'" class="btn btn-primary" type = "button">Manage Retailers</button>
+                                                                    &nbsp;                                                               
+                                                                </div>
+                                                    </div>
+                                                </div>
+                                        </form>
+                                        
+                                            </div>
+	<!--			<div class="row">
+											<div class="form-group col-md-6">
+												<label class="col-md-4 control-label">Order Date</label>
+												<div class="col-md-8">
+													<div class="input-group">
+														<span class="input-group-addon">
+															<i class="fa fa-calendar"></i>
+														</span>
+														<input type="text" data-plugin-datepicker class="form-control">
+													</div>
+												</div>
+											</div>
+                                            <div class="form-group col-md-6">
+												<label class="col-md-4 control-label">Delivery Date</label>
+												<div class="col-md-8">
+													<div class="input-group">
+														<span class="input-group-addon">
+															<i class="fa fa-calendar"></i>
+														</span>
+														<input type="text" data-plugin-datepicker class="form-control">
+													</div>
+												</div>
+											</div>
+                            </div>
+                                            <div class = "row">
+                                            
+                                            
+                                            <div class="form-group col-md-6">
+												<label class="col-md-4 control-label">Size</label>
+												<div class="col-md-8">
+													<select data-plugin-selectTwo class="form-control populate">
+														<optgroup label="Apparel Sizes">
+															<option value="L">L - Large</option>
+															<option value="M">M - Medium</option>
+                                                            <option value="S">S - Small</option>
+														</optgroup>
+														
+													</select>
+												</div>
+											</div>
+                                                <div class="form-group col-md-6">
+												<label class="col-md-4 control-label">Quantity</label>
+												<div class="col-md-8">
+													<div data-plugin-spinner data-plugin-options='{ "value":0, "min": 0, "max": 100 }'>
+														<div class="input-group" style="width:150px;">
+															<input type="text" class="spinner-input form-control" maxlength="3" readonly>
+															<div class="spinner-buttons input-group-btn">
+																<button type="button" class="btn btn-default spinner-up">
+																	<i class="fa fa-angle-up"></i>
+																</button>
+																<button type="button" class="btn btn-default spinner-down">
+																	<i class="fa fa-angle-down"></i>
+																</button>
+															</div>
+														</div>
+													</div>
+													<p>
+														with <code>max</code> value set to 100
+													</p>
+												</div>
+											</div>
+                                                </div>
+                                            
+						
+											
+										</form>
+                                        <br>
+                                        <div class="row">
+											<div class="col-sm-12 col-sm-offset-4">
+												<button class="btn btn-primary">Submit</button>
+                                                &nbsp;
+												<button type="reset" class="btn btn-default">Reset</button>
+											</div>
+										</div>
+									</div>
+								</section>
+						
+			
+						
+							</div>
+						</div>-->
 				</section>
 			</div>
 
@@ -1583,6 +1155,12 @@
 		<script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
 		<script src="assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
 		
+		<!-- Specific Page Vendor -->
+		<script src="assets/vendor/select2/select2.js"></script>
+		<script src="assets/vendor/jquery-datatables/media/js/jquery.dataTables.js"></script>
+		<script src="assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js"></script>
+		<script src="assets/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>
+		
 		<!-- Theme Base, Components and Settings -->
 		<script src="assets/javascripts/theme.js"></script>
 		
@@ -1592,5 +1170,10 @@
 		<!-- Theme Initialization Files -->
 		<script src="assets/javascripts/theme.init.js"></script>
 
+
+		<!-- Examples -->
+		<script src="assets/javascripts/tables/examples.datatables.default.js"></script>
+		<script src="assets/javascripts/tables/examples.datatables.row.with.details.js"></script>
+		<script src="assets/javascripts/tables/examples.datatables.tabletools.js"></script>
 	</body>
 </html>
